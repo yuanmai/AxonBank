@@ -5,6 +5,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import login.pages.LoginPage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -44,7 +45,7 @@ public class LoginStep extends BaseUtil {
     }
 
 
-    @And("^I enter the following for Login$")
+    @When("^I enter the following for Login$")
     public void iEnterTheFollowingForLogin(DataTable table) throws Throwable {
         //Create an ArrayList
         List<User> users = new ArrayList<User>();
@@ -58,7 +59,7 @@ public class LoginStep extends BaseUtil {
         }
     }
 
-    @And("^I enter ([^\"]*) and ([^\"]*)$")
+    @When("^I enter ([^\"]*) and ([^\"]*)$")
     public void iEnterUsernameAndPassword(String userName, String password) throws Throwable {
         System.out.println("UserName is : " + userName);
         System.out.println("Password is : " + password);
